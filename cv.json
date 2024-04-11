@@ -2,7 +2,7 @@
   "basics": {
     "name": "Juan Pablo González Astudillo",
     "label": "Estudiante de Ingenieria Informatica",
-    "image": "src/assets/yumi_ela.jpg",
+    "image": "/yumi_ela.webp",
     "email": "juanpablogonzalezastudillo@gmail.com",
     "phone": "+56 9 1234 5678",
     "url": "",
@@ -321,7 +321,8 @@
       "description": "Mi portfolio personal y blog hecho en Astro.",
       "highlights": [
         "En desarrollo",
-        "Astro"
+        "Astro",
+        "Tailwind"
       ],
       "url": "link del github del portafolio deahh",
       "description_completa": "Mi portfolio personal y blog hecho en Astro. Este proyecto es mi portfolio personal y blog, hecho en Astro. El proyecto esta en desarrollo."
