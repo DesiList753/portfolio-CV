@@ -1,0 +1,344 @@
+{
+  "basics": {
+    "name": "Juan Pablo González Astudillo",
+    "label": "Estudiante de Ingenieria Informatica",
+    "image": "src/assets/yumi_ela.jpg",
+    "email": "juanpablogonzalezastudillo@gmail.com",
+    "phone": "+56 9 1234 5678",
+    "url": "",
+    "summary": "Estudiante de Ingenieria Informatica en la Universidad Técnica Federico Santa María. Me gusta la programación.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "",
+      "countryCode": "Chi",
+      "region": "Chile"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "Juan Pablo González Astudillo",
+        "url": "https://linkedin.com/in/juan-pablo-gonzález-astudillo-627b41289/"
+      },
+      {
+        "network": "X",
+        "username": "DesiList753",
+        "url": "https://x.com/DesiList753"
+      },
+      {
+        "network": "Instagram",
+        "username": "Juan Pablo González Astudillo",
+        "url": "https://instagram.com/desilist753"
+      },
+      {
+        "network": "GitHub",
+        "username": "DesiList753",
+        "url": "https://github.com/DesiList753"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Rosa Agustina Resort & Spa",
+      "position": "Practica - Programador Informático",
+      "url": "https://www.rosaagustina.cl/",
+      "startDate": "2023-12-26",
+      "endDate": "2024-02-20",
+      "summary": "Ejecute rutinas de refactoring y mejoras en el código de la empresa, además de la creación de nuevas funcionalidades y aplicaciones web.",
+      "highlights": [
+        "Formulario de Spa enlazado con AppsScript (Google)",
+        "Aplicacion de preguntas frecuentes enlazada con AppsScript (Google)",
+        "Refactorización de código hecho en Django"
+      ]
+    },
+    {
+      "name": "Rosa Agustina Resort & Spa",
+      "position": "Practica - Mantención de Equipos",
+      "url": "https://www.rosaagustina.cl/",
+      "startDate": "2021-12-01",
+      "endDate": "2022-01-20",
+      "summary": "Trabaje en el area de mantencion, reparando equipos descompuestos y realizando mantenimiento preventivo. Ademas de la creación de un sistema de motor de piscinas.",
+      "highlights": [
+        "Diseño de sistema de piscinas",
+        "Mantenimiento de equipos de la empresa"
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Organization",
+      "position": "Volunteer",
+      "url": "https://organization.com/",
+      "startDate": "2012-01-01",
+      "endDate": "2013-01-01",
+      "summary": "Description…",
+      "highlights": [
+        "Awarded 'Volunteer of the Month'"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universidad Técnica Federico Santa María",
+      "url": "https://usm.cl/",
+      "area": "Ingenieria en Informática",
+      "studyType": "Universidad",
+      "startDate": "2022-03-04",
+      "endDate": null,
+      "courses": [
+        "Programacion de videojuegos en Unity2D"
+      ]
+    },
+    {
+      "institution": "Colegio Marista Diego Echevería",
+      "url": "https://www.fde.maristas.cl/",
+      "area": "Enseñanza Tecnica",
+      "studyType": "Enseñanza Media Tecnica en Electrónica",
+      "startDate": "2020-03-01",
+      "endDate": "2021-12-01",
+      "courses": [
+        ""
+      ]
+    },
+    {
+      "institution": "Colegio Marista Diego Echevería",
+      "url": "https://www.fde.maristas.cl/",
+      "area": "Enseñanza Media",
+      "studyType": "Enseñanza Media Científico Humanista",
+      "startDate": "2019-03-01",
+      "endDate": "2019-12-01",
+      "courses": [
+        ""
+      ]
+    },
+    {
+      "institution": "Colegio Ignacio Carrera Pinto de Olmué",
+      "url": "https://www.cicpolmue.cl/",
+      "area": "Enseñanza Media",
+      "studyType": "Enseñanza Media Científico Humanista",
+      "startDate": "2018-03-01",
+      "endDate": "2018-12-01",
+      "courses": [
+        ""
+      ]
+    },
+    {
+      "institution": "Colegio Ignacio Carrera Pinto de Olmué",
+      "url": "https://www.cicpolmue.cl/",
+      "area": "Enseñanza Basica",
+      "studyType": "Enseñanza Basica",
+      "startDate": "2010-03-01",
+      "endDate": "2017-12-01",
+      "courses": [
+        ""
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Award",
+      "date": "2014-11-01",
+      "awarder": "Company",
+      "summary": "There is no spoon."
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Certificate",
+      "date": "2021-11-07",
+      "issuer": "Company",
+      "url": "https://certificate.com"
+    }
+  ],
+  "publications": [
+    {
+      "name": "Publication",
+      "publisher": "Company",
+      "releaseDate": "2014-10-01",
+      "url": "https://publication.com",
+      "summary": "Description…"
+    }
+  ],
+  "skills": [
+    {
+      "name": "HTML",
+      "level": "Medio",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend"
+      ]
+    },
+    {
+      "name": "CSS",
+      "level": "Basico",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "Diseño Responsive"
+      ]
+    },
+    {
+      "name": "JavaScript",
+      "level": "Medio",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "Backend",
+        "Fullstack"
+      ]
+    },
+    {
+      "name": "Bootstrap",
+      "level": "Medio",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "CSS Framework",
+        "Diseño Responsive"
+      ]
+    },
+    {
+      "name": "Tailwind",
+      "level": "Aprendiendo",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "CSS Framework",
+        "Diseño Responsive"
+      ]
+    },
+    {
+      "name": "TypeScript",
+      "level": "Basico",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "Backend",
+        "JavaScript Superset"
+      ]
+    },
+    {
+      "name": "Node",
+      "level": "Basico",
+      "keywords": [
+        "Desarrollo Web",
+        "Backend",
+        "JavaScript",
+        "Servidor"
+      ]
+    },
+    {
+      "name": "MySQL",
+      "level": "Basico",
+      "keywords": [
+        "Bases de Datos",
+        "SQL",
+        "Almacenamiento de Datos",
+        "Backend"
+      ]
+    },
+    {
+      "name": "Git",
+      "level": "Basico",
+      "keywords": [
+        "Control de Versiones",
+        "Colaboración",
+        "Código Fuente"
+      ]
+    },
+    {
+      "name": "GitHub",
+      "level": "Medio",
+      "keywords": [
+        "Control de Versiones",
+        "Colaboración",
+        "Código Fuente",
+        "Git"
+      ]
+    },
+    {
+      "name": "React",
+      "level": "Basico",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "JavaScript Library",
+        "UI"
+      ]
+    },
+    {
+      "name": "Django",
+      "level": "Medio",
+      "keywords": [
+        "Desarrollo Web",
+        "Backend",
+        "Python",
+        "Framework"
+      ]
+    },
+    {
+      "name": "Python",
+      "level": "Medio",
+      "keywords": [
+        "Python",
+        "Fullstack",
+        "Desarrollo Web",
+        "Almacenamiento de Datos"
+      ]
+    },
+    {
+      "name": "Astro",
+      "level":"Medio",
+      "keywords":[
+        "JavaScript",
+        "Desarrollo Web",
+        "Framework",
+        "CSS Framework"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Español",
+      "fluency": "Hablante nativo"
+    },
+    {
+      "language": "Ingles",
+      "fluency": "Medio"
+    }
+  ],
+  "references": [
+    {
+      "name": "Spirit",
+      "reference": "Spirit es un corcel mustang salvaje e ingobernable que recorre la indómita frontera estadounidense. Cuando encuentra a un hombre por primera vez, un joven de la tribu de los Lakota llamado Little Creek, Spirit se niega a dejarse domar por él aunque no le niega su amistad."
+    }
+  ],
+  "projects": [
+    {
+      "name": "Portfolio",
+      "isActive": true,
+      "show": true,
+      "description": "Mi portfolio personal y blog hecho en Astro.",
+      "highlights": [
+        "En desarrollo",
+        "Astro"
+      ],
+      "url": "link del github del portafolio deahh",
+      "description_completa": "Mi portfolio personal y blog hecho en Astro. Este proyecto es mi portfolio personal y blog, hecho en Astro. El proyecto esta en desarrollo."
+    },
+    {
+      "name": "React-AppScript",
+      "isActive": true,
+      "show": true,
+      "description": "Documentación y ejemplos de cómo usar React con Google Apps Script, manejo de hoja actualizable.",
+      "highlights": [
+        "En desarrollo",
+        "JavaScript",
+        "React",
+        "Google Apps Script"
+      ],
+      "url": "https://github.com/DesiList753/React-sheets_database",
+      "description_completa": "Muestro una indicacion con ejemplos para poder utilizar una hoja de **[Google Spreadsheets](https://docs.google.com/spreadsheets/)** como base de datos para una aplicacion **[React](https://es.react.dev/learn)** utilizando el propio AppScript enlazado a la hoja de Google."
+    }
+  ]
+}

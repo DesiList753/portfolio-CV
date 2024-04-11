@@ -1,0 +1,57 @@
+---
+const { title } = Astro.props;
+
+import Seo from "../components/SEO.astro";
+---
+<!--  Este Portafolio esta basado en el Protafolio minimalista de MiduDev:
+  "https://print-portfolio.vercel.app/"
+-->
+<!doctype html>
+<html lang="es">
+  <Seo titulo={title} />
+  <body>
+    <slot />
+  </body>
+  <style is:global>
+    :root {
+		--accent: 136, 58, 234;
+		--accent-light: 224, 204, 250;
+		--accent-dark: 49, 10, 101;
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			rgb(var(--accent-light)) 30%,
+			white 60%
+		);
+	}
+    html {
+      font-family: "Courier New", monospace;
+      letter-spacing: -0.025rem;
+      background-size: 224px;
+      background-color: #333;
+    }
+
+    body,
+    figure {
+      margin: 0;
+      padding: 0;
+    }
+    section {
+      max-width: 700px;
+      margin: 0 auto 48px;
+    }
+
+    h2 {
+      margin-bottom: 8px;
+      font-weight: 700;
+      line-height: 1.5;
+      font-size: 1.5rem;
+    }
+
+    @media (width <= 700px) {
+      section {
+        margin-bottom: 38px;
+      }
+    }
+  </style>
+</html>

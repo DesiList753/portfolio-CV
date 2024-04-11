@@ -1,0 +1,53 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import GitHub from "../../icons/GitHub.astro";
+
+import json from "../../../cv.json";
+const projects = json["projects"];
+
+const { name } = Astro.params;
+const datos = projects.find((project) => project.name === name);
+---
+<Layout title=`Info - ${name}`>
+  <div
+    class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl m-4"
+  >
+    <div class="md:flex">
+      <div class="p-8">
+        <div
+          class="uppercase tracking-wide text-sm text-indigo-500 font-semibold"
+        >
+          {name}
+        </div>
+        <div>
+        </div>
+        {datos.description_completa && <div class="mt-2 text-gray-600">{datos.description_completa}</div>}
+        {datos.isActive && <div class="mt-2 text-green-500">Activo</div>}
+        {
+          datos.url && (
+            <a
+              class="github-code-link"
+              href={datos.url}
+              title={`Ver código fuente del proyecto ${name}`}
+            >
+              <GitHub />
+            </a>
+          )
+        }
+        <div class="mt-4">
+          {
+            Array.isArray(datos.highlights) &&
+              datos.highlights.map((highlight) => (
+                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                  #{highlight}
+                </span>
+              ))
+          }
+        </div>
+        <div class="mt-4">
+          <a href="javascript:history.back()" class="btn btn-primary">Volver</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

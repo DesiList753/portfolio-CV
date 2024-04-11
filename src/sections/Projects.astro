@@ -1,0 +1,43 @@
+---
+import Card_Proyect from "../components/Card_Proyect.astro";
+
+import json from "../../cv.json";
+const projects  = json["projects"];
+
+
+---
+
+<div class="mt-2">
+  <h1>Proyectos</h1>
+  <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"></ul>
+    {
+      projects.map(({ url, description, highlights, name, isActive ,show}) => {
+        if (!show) return null;
+        return ( 
+          <li>
+            <Card_Proyect
+              url={url}
+              description={description}
+              highlights={highlights}
+              name={name}
+              isActive={isActive}
+            />
+          </li>
+        );
+      })
+    }
+  </ul>
+</div>
+<style>
+  h1{
+    margin-bottom: 8px;
+    font-weight: 700;
+    line-height: 1.5;
+    font-size: 1.5rem;
+  }
+  @media (width <= 700px) {
+    time {
+      text-align: right;
+    }
+  }
+</style>

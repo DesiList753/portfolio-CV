@@ -1,0 +1,141 @@
+---
+import LinkedIn from "../icons/LinkedIn.astro";
+import GitHub from "../icons/GitHub.astro";
+import WorldMap from "../icons/WorldMap.astro";
+import Instagram from "../icons/Instagram.astro";
+import X from "../icons/X.astro";
+
+//import de json
+import * as json from "../../cv.json";
+const name = json["basics"].name;
+const label = json["basics"].label;
+const image = json["basics"].image;
+const email = json["basics"].email;
+const location = json["basics"].location;
+const profiles = json["basics"].profiles;
+
+const SOCIAL_ICONS = {
+  GitHub,
+  LinkedIn,
+  Instagram,
+  X,
+};
+---
+<div
+  class="flex justify-between"
+>
+  <div class="flex flex-col gap-4 pr-8">
+    <h1 class="text-4xl text-g font-bold">{name}</h1>
+    <h2 class="text-gray-400 text-2xl font-medium">{label}</h2>
+    <span class="flex items-center text-gray-500">
+      <WorldMap />
+      {location["city"]}, {location["region"]}
+    </span>
+
+    <footer class="no-print flex gap-2">
+      {
+        profiles.map(({ network, url, username }) => {
+          const Icon = SOCIAL_ICONS[network];
+          if (!Icon) {
+            console.error(
+              `No se encontró un icono para la red social "${network}"`
+            );
+            return null;
+          }
+
+          return (
+            <a
+              href={url}
+              title={`Visita mi ${network}`}
+              target="_blank"
+              rel="noreferrer"
+              class="inline-flex items-center justify-center border-gray-500 p-2 h-9 w-9 rounded-md transition-colors hover:bg-gray-500 hover:border-gray-500"
+            >
+              <Icon />
+            </a>
+          );
+        })
+      }
+    </footer>
+  </div>
+  <figure class="aspect-w-1 aspect-h-1 object-cover w-36 rounded-lg">
+    <img src={image} alt={name} />
+  </figure>
+</div>
+
+<style>
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    color: #444;
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-wrap: balance;
+  }
+
+  img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    width: 128px;
+    border-radius: 16px;
+  }
+
+  span {
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.85rem;
+    letter-spacing: -0.05rem;
+  }
+
+  footer {
+    color: #555;
+    font-size: 0.65rem;
+    display: flex;
+    gap: 4px;
+    margin-top: 8px;
+  }
+
+  footer a {
+    color: #777;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eee;
+    padding: 4px;
+    height: 32px;
+    width: 32px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+
+  footer a:hover {
+    background: #eee;
+    border: 1px solid #ddd;
+  }
+
+  @media (width <= 700px) {
+    .container {
+      flex-direction: column-reverse;
+    }
+
+    h2 {
+      text-wrap: balance;
+    }
+
+    figure {
+      margin: 0 auto;
+    }
+  }
+</style>

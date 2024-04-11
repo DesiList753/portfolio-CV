@@ -1,0 +1,62 @@
+---
+import GitHub from "../icons/GitHub.astro";
+
+export interface Props {
+  name: string;
+  description: string;
+  url: string;
+  highlights: string[];
+  isActive: boolean;
+}
+
+const { url, description, highlights, name, isActive } = Astro.props;
+---
+
+<article class="bg-white rounded-lg shadow-lg p-6">
+  <header>
+    <h3 class="text-xl font-bold mb-2">
+      <a href={`proyectos/${name}`} title={`Ver el proyecto ${name}`}>
+        {name}
+      </a>
+      {isActive && <span class="text-green-500">•</span>}
+      {
+        url && (
+          <a
+            class="github-code-link"
+            href={url}
+            title={`Ver código fuente del proyecto ${name}`}
+          >
+            <GitHub />
+          </a>
+        )
+      }
+    </h3>
+    <p class="text-gray-600">{description}</p>
+  </header>
+  <footer class="mt-4">
+    {
+      Array.isArray(highlights) && highlights.map((highlight: string) => {
+          return <span class="inline-block bg-gray-200 text-gray-700 rounded-full px-3 py-1 text-sm font-semibold mr-2">{highlight}</span>;
+        })
+      }
+  </footer>
+</article>
+
+<style>
+  article {
+    margin-bottom: 2rem;
+  }
+
+  h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .github-code-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-text);
+  }
+</style>

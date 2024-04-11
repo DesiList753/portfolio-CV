@@ -1,0 +1,25 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Projects from "../../sections/Projects.astro";
+---
+
+<Layout title="Proyectos">
+  <main>
+    <Projects />
+    <div class="mt-4">
+      <a href="/" class="btn btn-primary">Volver</a>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  main {
+    padding: 4rem;
+    margin: auto;
+    width: 800px;
+    border: 10px solid;
+  }
+  body {
+    background-image: url("../../assets/fondo_folio.png");
+  }
+</style>
