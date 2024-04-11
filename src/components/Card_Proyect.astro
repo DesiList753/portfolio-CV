@@ -12,9 +12,9 @@ export interface Props {
 const { url, description, highlights, name, isActive } = Astro.props;
 ---
 
-<article class="bg-white rounded-lg shadow-lg p-6">
+<article class="p-1">
   <header>
-    <h3 class="text-xl font-bold mb-2">
+    <h2 class="text-xl">
       <a href={`proyectos/${name}`} title={`Ver el proyecto ${name}`}>
         {name}
       </a>
@@ -30,24 +30,37 @@ const { url, description, highlights, name, isActive } = Astro.props;
           </a>
         )
       }
-    </h3>
-    <p class="text-gray-600">{description}</p>
+    </h2>
+    <p class="text-gray-800">{description}</p>
   </header>
   <footer class="mt-4">
     {
-      Array.isArray(highlights) && highlights.map((highlight: string) => {
-          return <span class="inline-block bg-gray-200 text-gray-700 rounded-full px-3 py-1 text-sm font-semibold mr-2">{highlight}</span>;
+      Array.isArray(highlights) &&
+        highlights.map((highlight: string) => {
+          return (
+            <span class="inline-block bg-gray-200 text-gray-700 rounded-full px-1 text-sm font-semibold mr-2">
+              {highlight}
+            </span>
+          );
         })
-      }
+    }
   </footer>
 </article>
 
 <style>
-  article {
-    margin-bottom: 2rem;
+
+  a {
+    transition:
+      color 0.2s ease,
+      transform 0.3s ease;
+    transform: scale(1);
   }
 
-  h3 {
+  a:hover {
+    color: #ffffff;
+    transform: scale(1.05);
+  }
+  h2 {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -56,7 +69,6 @@ const { url, description, highlights, name, isActive } = Astro.props;
   .github-code-link {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
     color: var(--color-text);
   }
 </style>

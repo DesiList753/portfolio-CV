@@ -1,23 +1,26 @@
 ---
-import { education } from "../../cv.json"
+import { education } from "../../cv.json";
 ---
-
 <div class="mt-2">
   <h1>Educación</h1>
-  <ul class="mb-10">
+  <ul >
     {
-      education.map(({ institution, startDate, endDate, area ,url}) => {
-        const startYear = new Date(startDate).getFullYear()
+      education.map(({ institution, startDate, endDate, area, url }) => {
+        const startYear = new Date(startDate).getFullYear();
         const endYear =
-          endDate != null ? new Date(endDate).getFullYear() : "Actual"
-        const years = `${startYear} - ${endYear}`
+          endDate != null ? new Date(endDate).getFullYear() : "Actual";
+        const years = `${startYear} - ${endYear}`;
 
         return (
-          <li>
-            <article>
+          <li class="shadow">
+            <article class="p-1">
               <header>
                 <div>
-                  <h3><a href={url} target="_blank">{institution}</a></h3>
+                  <h2>
+                    <a href={url} target="_blank">
+                      {institution}
+                    </a>
+                  </h2>
                 </div>
 
                 <time>{years}</time>
@@ -27,7 +30,7 @@ import { education } from "../../cv.json"
               </footer>
             </article>
           </li>
-        )
+        );
       })
     }
   </ul>
@@ -35,11 +38,11 @@ import { education } from "../../cv.json"
 
 <style>
   h1{
-    margin-bottom: 16px;
+    margin-bottom: 8px;
     font-weight: 700;
     line-height: 1.5;
-    font-size: 2rem;
-    color: #333;
+    font-size: 1.5rem;
+    color:black;
   }
   ul {
     display: flex;
@@ -48,15 +51,26 @@ import { education } from "../../cv.json"
   }
 
   article {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #000000;
   }
 
-  article h3 {
+  article h2 {
     font-weight: 500;
     color: #333;
     font-size: 1.25rem;
   }
 
+  a {
+    transition:
+      color 0.2s ease,
+      transform 0.3s ease;
+    transform: scale(1);
+  }
+
+  a:hover {
+    color: #ffffff;
+    transform: scale(1.05);
+  }
   header {
     display: flex;
     justify-content: space-between;
@@ -64,7 +78,7 @@ import { education } from "../../cv.json"
   }
 
   time {
-    color: #555;
+    color: #ffffff;
     font-size: 0.85rem;
     min-width: 102px;
   }
@@ -74,9 +88,15 @@ import { education } from "../../cv.json"
     font-size: 1rem;
   }
 
-  @media (width <= 700px) {
+  @media (max-width: 700px) {
+    header {
+      flex-direction: column;
+      align-items: baseline;
+    }
+
     time {
-      text-align: right;
+      margin-top: 8px;
+      text-align: left;
     }
   }
 </style>

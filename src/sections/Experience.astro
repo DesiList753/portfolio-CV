@@ -13,16 +13,16 @@ import { work } from "../../cv.json"
           const years = `${startYear} - ${endYear}`
 
           return (
-            <li>
-              <article>
+            <li class="shadow">
+              <article class="p-1">
                 <header >
                   <div>
-                    <h3 >
+                    <h2 >
                       <a href={url} title={`Ver ${name}`} target="_blank" >
                         {name}
                       </a>
-                    </h3>
-                    <h4 >{position}</h4>
+                    </h2>
+                    <h3 >{position}</h3>
                   </div>
 
                   <time >{years}</time>
@@ -41,41 +41,41 @@ import { work } from "../../cv.json"
 </div>
 
 <style>
-  .container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-  }
   h1{
     margin-bottom: 8px;
     font-weight: 700;
     line-height: 1.5;
     font-size: 1.5rem;
+    color:black;
+  }
+  article {
+    border-bottom: 1px solid #000000;
   }
   ul {
     display: flex;
     flex-direction: column;
-    gap: 32px;
   }
 
-  article h3 {
+  article h2 {
     font-weight: 500;
     color: #111;
   }
 
+  a {
+    color: #444;
+    transition: color 0.2s ease, transform 0.3s ease;
+  }
+
   article a {
-    color: red;
+    transition:
+      color 0.2s ease,
+      transform 0.3s ease;
+    transform: scale(1);
   }
 
   article a:hover {
-    text-decoration: underline;
-  }
-
-  article h4 {
-    color: #222;
-    font-weight: 400;
+    color: #ffffff;
+    transform: scale(1.05);
   }
 
   header {
@@ -86,17 +86,21 @@ import { work } from "../../cv.json"
   }
 
   time {
-    color: #555;
+    color: #ffffff;
     font-size: 0.85rem;
     min-width: 102px;
   }
+  
 
-  @media (width <= 700px) {
-    container: {
+  @media (max-width: 700px) {
+    header {
       flex-direction: column;
+      align-items: baseline;
     }
+
     time {
-      text-align: right;
+      margin-top: 8px;
+      text-align: left;
     }
   }
 </style>
