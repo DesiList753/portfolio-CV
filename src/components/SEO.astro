@@ -1,5 +1,6 @@
 ---
 const { titulo } = Astro.props;
+import { SpeedInsights } from "@vercel/speed-insights/next";
 ---
 
 <head>
@@ -8,4 +9,5 @@ const { titulo } = Astro.props;
   <meta name="viewport" content="width=device-width" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <title>{titulo}</title>
+  <SpeedInsights />
 </head>
